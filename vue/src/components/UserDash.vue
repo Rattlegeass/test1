@@ -1,27 +1,25 @@
 <template>
-    <div class="container">
-        <Layouts />
-        <div class="position-absolute top-50 start-50 translate-middle">
-            <h3>welcome to the user page</h3>
-        </div>
+  <div>
+    <Layouts />
+    <div class="p-5 mb-4 rounded-3">
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">WELCOME TO USER PAGE</h1>
+      </div>
     </div>
+  </div>
+</template>
 
-  </template>
-  
-  <script>
-  import Layouts from '@/components/LayoutsUser.vue'
-  export default {
-    name: 'UserDash',
-    components:{
-      Layouts
-    },
-    data () {
-      return {
-        
-      }
+<script>
+import Layouts from '@/components/LayoutsUser.vue'
+export default {
+  name: 'UserDash',
+  components:{
+    Layouts
+  },
+  data () {
+    return {
+      
     }
   }
-  </script>
-  
-  <!-- Add "scoped" attribute to limit CSS to this component only -->
-  
+}
+</script>

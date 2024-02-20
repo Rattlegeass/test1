@@ -1,29 +1,39 @@
 <template>
-    <div class="container">
+    <div>
         <Layouts />
-        <table class="table table-hover position-absolute top-50 start-50 translate-middle" border="3">
-            <thead class="table-secondary">
-                <tr>
-                    <th scope="col">id</th>
-                    <th scope="col">name</th>
-                    <th scope="col">email</th>
-                    <th scope="col">role_id</th>
-                    <th scope="col">action</th>
-                </tr>
-            </thead>
-            <tbody v-for="users in user" :key="users.id">
-                <tr class="table-secondary-subtle">
-                    <td>{{ users.id}}</td>
-                    <td>{{ users.name}}</td>
-                    <td>{{ users.email}}</td>
-                    <td>{{ users.role_id}}</td>
-                    <td> <router-link :to="{name:  'EditUser', params: {id: users.id}}" class="btn btn-primary btn-sm">Update</router-link>  
-                         <button type="button"  class="btn btn-danger btn-sm" @click.prevent="deleteUser(users.id)">Delete</button></td>
-                </tr>
-            </tbody>
-        </table>
-
-        <!-- <input type="button" value="Add User" class="mt-4 p-2"> -->
+        <div class="container mt-5 mb-5">
+            <div class="row">
+                <div class="card border-0 rounded shadow">
+                    <br>
+                    <h4>DATA USER</h4>
+                    <div class="card-body">
+                        <table class="table table-bordered">
+                            <thead class="bg-dark text-white">
+                                <tr>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Role ID</th>
+                                    <th scope="col">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="users in user" :key="users.id">
+                                    <td>{{users.name}}</td>
+                                    <td>{{users.email}}</td>
+                                    <td>{{ users.role_id}}</td>
+                                    <td class="text-center">
+                                        <router-link :to="{name:  'EditUser', params: {id: users.id}}" class="btn btn-sm btn-primary rounded-sm shadow border-0 me-2">EDIT</router-link>
+                                        <button type="button" class="btn btn-sm btn-danger rounded-sm shadow border-0" @click.prevent="deleteUser(users.id)">DELETE</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <b>Role ID</b>
+                        <p>1 = Admin  ||  2 = User</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 

@@ -1,8 +1,10 @@
 <template>
-  <div class="container">
+  <div>
     <Layouts />
-    <div class="position-absolute top-50 start-50 translate-middle">
-      <h2>Welcome to admin page</h2>
+    <div class="p-5 mb-4 rounded-3">
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">WELCOME TO ADMIN PAGE</h1>
+      </div>
     </div>
   </div>
 </template>
@@ -21,5 +23,3 @@ export default {
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
