@@ -9,14 +9,14 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <router-link to="/admin/data-user" class="nav-link active" aria-current="page">DATA USER</router-link>
+              <router-link to="/admin/data-user" class="nav-link" aria-current="page">DATA USER</router-link>
             </li>
             <li class="nav-item">
               <router-link class="nav-link" to="/admin/add-user">ADD USER</router-link>
             </li>
           </ul>
           <div class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <button class="btn btn-success" v-on:click="logout" to="/login">Log Out</button>
+            <button class="btn btn-danger" v-on:click="logout" to="/login">Log Out</button>
           </div>
         </div>
       </div>

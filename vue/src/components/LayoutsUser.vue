@@ -4,7 +4,7 @@
       <div class="container">
         <router-link class="navbar-brand" to="/user">USER</router-link>
           <div class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <button class="btn btn-success" v-on:click="logout" to="/login">Log Out</button>
+            <button class="btn btn-danger" v-on:click="logout" to="/login">Log Out</button>
           </div>
       </div>
     </nav>
