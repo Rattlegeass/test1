@@ -53,8 +53,8 @@ export default {
         .then(({ data }) => {
           console.log(data);
           try {
-            alert("User Successfully Registered!");
-            this.$router.push({ name: "AdminPage" });
+            // alert("User Successfully Registered!");
+            this.$router.push({ name: "DataUser" });
           } catch (error) {
             alert(error);
           }

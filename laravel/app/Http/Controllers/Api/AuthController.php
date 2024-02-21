@@ -74,7 +74,7 @@ class AuthController extends Controller
             'success' => true,
             'user'    => $usr,
             'status' => 200,
-            'message' => 'Successfully Edit Data' 
+            'message' => 'Successfully Edit Data!' 
         ], 200);
     }
 
@@ -179,12 +179,12 @@ class AuthController extends Controller
         if($usr){
             $usr->delete();
             return response()->json([
-                'message' => "Data successfully deleted",
+                'message' => "Data Successfully Deleted!",
                 'code' => 200
             ]);
         }else{
             return response([
-                'message' => "Failed delete data $id / data doesn't exists"
+                'message' => "Failed delete data $id / Data doesn't exists"
             ]);
         }
     }

@@ -61,13 +61,13 @@ export default {
           this.$router.push({name: 'DataUser'})
 
           if (response.status === 200) {
-            alert(response.data.message);
+            // alert(response.data.message);
           } else {
-            alert('Error Edit Data');
+            alert('Error Edit Data!');
           }
         } catch (error) {
           console.error('Error Edit Data:', error);
-          alert('Error Edit Data');
+          alert('Error Edit Data!');
         }
       }
     }

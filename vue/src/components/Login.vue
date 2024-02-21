@@ -56,11 +56,11 @@
                 if(role === 1){
                     // Redirect ke halaman HelloWorld setelah login berhasil
                     this.$router.push({ name: 'AdminPage' });
-                    alert("Login Success as Admin");
+                    // alert("Login Success as Admin");
                 }else if(role === 2){
                     // Redirect ke halaman HelloWorld setelah login berhasil
                     this.$router.push({ name: 'UserDash' });
-                    alert("Login Success as User!");
+                    // alert("Login Success as User!");
                 }else{
                     alert('User is Not Registered!')
                 }

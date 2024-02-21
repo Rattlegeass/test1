@@ -25,24 +25,24 @@ const router = new Router({
       meta: { requiresAuth: true }
     },
     {
-      path: '/data_user',
+      path: '/admin/data-user',
       name: 'DataUser',
       component: DataUser,
       meta: { requiresAuth: true }
     },
     {
-      path: '/regis',
+      path: '/register',
       name: 'Register',
       component: Register
     },
     {
-      path: '/add-user',
+      path: '/admin/add-user',
       name: 'AddUser',
       component: AddUser,
       meta: { requiresAuth: true }
     },
     {
-      path: '/Admin/edit_user/:id?',
+      path: '/admin/edit-user/:id?',
       name: 'EditUser',
       component: EditUser
     },

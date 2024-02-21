@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="card border-0 rounded shadow">
                     <br>
-                    <h4>DATA USER</h4>
+                    <h4><b>DATA USER</b></h4>
                     <div class="card-body">
                         <table class="table table-bordered">
                             <thead class="bg-dark text-white">
@@ -68,7 +68,7 @@ import axios from 'axios'
                 let url = `http://127.0.0.1:8000/api/delete/${id}`
                 await axios.delete(url).then(response => {
                     if(response.data.code == 200){
-                        alert(response.data.message)
+                        // alert(response.data.message)
                         this.getUser()
                     }
                 }).catch(error => {

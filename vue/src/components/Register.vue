@@ -51,7 +51,7 @@
                     ({data})=>{
                         console.log(data);
                         try{
-                            alert("User Successfully Registered!")
+                            // alert("User Successfully Registered!")
                             this.$router.push({ name: 'UserDash'})
                         }catch(err){
                             alert('User Failed Registered!')

@@ -18,7 +18,8 @@
         logout(){
             localStorage.removeItem('jwt')
             this.$router.push({name : 'Login'})
-            alert('Logout Success')
+            confirm('Are you sure you want to logout?')
+            // alert('Logout Success!')
             }
         }
     }
