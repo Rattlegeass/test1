@@ -6,7 +6,7 @@ import Login from '@/components/Login'
 import DataUser from '@/components/DataUser'
 import AddUser from '@/components/AddUser'
 import EditUser from '@/components/EditUser'
-import UserDash from '@/components/UserDash'
+import UserPage from '@/components/UserPage'
 
 Vue.use(Router)
 
@@ -20,8 +20,8 @@ const router = new Router({
     },
     {
       path: '/user',
-      name: 'UserDash',
-      component: UserDash,
+      name: 'UserPage',
+      component: UserPage,
       meta: { requiresAuth: true }
     },
     {

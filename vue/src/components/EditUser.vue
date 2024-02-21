@@ -4,10 +4,10 @@
     <div class="card-body" style="width: auto; padding: 1em;">
       <form @submit.prevent="updateData" class="text-start">
         <label class="py-1">Name</label>
-        <input type="text" v-model="user.name" name="name" id="name" class="form-control" required placeholder="Input Name"/>
+        <input type="text" v-model="user.name" name="name" id="name" class="form-control" required placeholder="Input Name" autocomplete="off"/>
 
         <label class="py-2">Email</label>
-        <input type="email" v-model="user.email" name="email" id="email" class="form-control" required placeholder="Input Email"/>
+        <input type="email" v-model="user.email" name="email" id="email" class="form-control" required placeholder="Input Email" autocomplete="off"/>
 
         <input type="submit" value="Save" class="btn btn-success position-relative" style="margin-top: 0.6em; margin-left: 43%;" />
       </form>

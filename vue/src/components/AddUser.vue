@@ -6,13 +6,13 @@
       <div class="card-body" style="width: auto; padding: 1em">
         <form @submit.prevent="saveData" class="text-start">
           <label class="py-1">Name</label>
-          <input type="text" v-model="user.name" name="name" id="name" class="form-control" required placeholder="Input Name"/>
+          <input type="text" v-model="user.name" name="name" id="name" class="form-control" required placeholder="Input Name" autocomplete="off"/>
 
           <label class="py-2">Email</label>
-          <input type="email" v-model="user.email" name="email" id="email" class="form-control" required placeholder="Input Email"/>
+          <input type="email" v-model="user.email" name="email" id="email" class="form-control" required placeholder="Input Email" autocomplete="off"/>
 
           <label class="py-2">Password</label>
-          <input type="password" v-model="user.password" name="password" id="password" class="form-control" required placeholder="Input Password"/>
+          <input type="password" v-model="user.password" name="password" id="password" class="form-control" required placeholder="Input Password" autocomplete="off"/>
 
           <input type="submit" value="Save" class="btn btn-success position-relative" style="margin-top: 0.6em; margin-left: 43%"/>
         </form>
@@ -49,7 +49,7 @@ export default {
   methods: {
     saveData() {
       axios
-        .post("http://127.0.0.1:8000/api/regis", this.user)
+        .post("http://127.0.0.1:8000/api/register", this.user)
         .then(({ data }) => {
           console.log(data);
           try {

@@ -12,7 +12,7 @@
 <script>
 import Layouts from '@/components/LayoutsUser.vue'
 export default {
-  name: 'UserDash',
+  name: 'UserPage',
   components:{
     Layouts
   },

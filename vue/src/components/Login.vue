@@ -7,9 +7,9 @@
   
                 <div class="card-body" align="left" style="padding: 2em;">
                     <label class="py-2">Email</label>
-                    <input type="email" v-model="user.email" class="form-control" placeholder="Input Email" >
+                    <input type="email" v-model="user.email" class="form-control" placeholder="Input Email" required autocomplete="off">
                     <label class="py-2">Password</label>
-                    <input type="password" v-model="user.password" class="form-control" placeholder="Input Password" >
+                    <input type="password" v-model="user.password" class="form-control" placeholder="Input Password" required autocomplete="off">
                 </div>
   
                 <p>Don't have any account yet? <router-link :to="{name: 'Register'}">Register Now!</router-link></p>
@@ -49,7 +49,7 @@
             // const role = response.data.role_id; // Ambil data dari respons
             // Cek apakah respons memiliki token
             const role = data.role
-            console.log("role id=", data.role)
+            console.log("Role ID =", data.role)
             if (data.token) {
                 // Simpan token di localStorage
                 localStorage.setItem('jwt', data.token);
@@ -59,7 +59,7 @@
                     // alert("Login Success as Admin");
                 }else if(role === 2){
                     // Redirect ke halaman HelloWorld setelah login berhasil
-                    this.$router.push({ name: 'UserDash' });
+                    this.$router.push({ name: 'UserPage' });
                     // alert("Login Success as User!");
                 }else{
                     alert('User is Not Registered!')
